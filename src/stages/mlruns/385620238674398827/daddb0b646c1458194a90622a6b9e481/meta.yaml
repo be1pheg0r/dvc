@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/dirs/%D0%A3%D1%87%D1%91%D0%B1%D0%B0/4%20%D1%81%D0%B5%D0%BC/%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F/dvc/src/stages/mlruns/385620238674398827/daddb0b646c1458194a90622a6b9e481/artifacts
+end_time: 1748095932560
+entry_point_name: ''
+experiment_id: '385620238674398827'
+lifecycle_stage: active
+run_id: daddb0b646c1458194a90622a6b9e481
+run_name: mysterious-grub-103
+run_uuid: daddb0b646c1458194a90622a6b9e481
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748095932410
+status: 4
+tags: []
+user_id: User

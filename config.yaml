@@ -1,0 +1,31 @@
+load_data:
+  load_path: "data/california_housing.csv"
+featurize:
+  save_path: "data/final.csv"
+  target_column: "MedHouseVal"
+  sampling_strategy: "auto"
+  random_state: 77
+split_data:
+  load_path: "data/final.csv"
+  test_size: 0.2
+  random_state: 777
+  train_path: "data/train.csv"
+  test_path: "data/test.csv"
+train:
+  train_path: "data/train.csv"
+  test_path: "data/test.csv"
+  model_path: "sklearn.ensemble.RandomForestRegressor"
+  params:
+    n_estimators: [ 100, 200, 500 ]
+    max_depth: [ null, 10, 20, 30 ]
+    min_samples_split: [ 2, 5, 10 ]
+    min_samples_leaf: [ 1, 2, 4 ]
+    max_features: [ "sqrt", "log2", null ]
+    bootstrap: [ true, false ]
+  random_state: 777
+  val_metrics: [
+    "mean_absolute_error",
+    "mean_squared_error",
+    "r2_score"
+  ]
+  save_path: "models/housing.joblib"

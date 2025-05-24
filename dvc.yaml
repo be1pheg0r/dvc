@@ -1,0 +1,27 @@
+stages:
+  prepare_data:
+    cmd: python src/stages/prepare_data.py
+    deps:
+      - src/stages/prepare_data.py
+      - data/california_housing.csv
+    outs:
+      - data/final.csv
+
+  split_data:
+    cmd: python src/stages/split_data.py
+    deps:
+      - src/stages/split_data.py
+      - data/final.csv
+    outs:
+      - data/train.csv
+      - data/test.csv
+
+  train_model:
+    cmd: python src/stages/train.py
+    deps:
+      - src/stages/train.py
+      - data/train.csv
+      - data/test.csv
+    outs:
+      - models/housing.joblib
+

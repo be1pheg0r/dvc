@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/dirs/%D0%A3%D1%87%D1%91%D0%B1%D0%B0/4%20%D1%81%D0%B5%D0%BC/%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F/dvc/src/stages/mlruns/351077417900034232/dba4848382a4473099408221498af4f7/artifacts
+end_time: 1748095993324
+entry_point_name: ''
+experiment_id: '351077417900034232'
+lifecycle_stage: active
+run_id: dba4848382a4473099408221498af4f7
+run_name: receptive-bass-958
+run_uuid: dba4848382a4473099408221498af4f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748095993255
+status: 4
+tags: []
+user_id: User
