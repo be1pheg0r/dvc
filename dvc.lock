@@ -1,0 +1,59 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python src/stages/prepare_data.py
+    deps:
+    - path: data/california_housing.csv
+      hash: md5
+      md5: fa9fe4cf24f70b69ac65fb33062ddf34
+      size: 1915795
+    - path: src/stages/prepare_data.py
+      hash: md5
+      md5: 7acaf317f99d18d97852f601aaf55530
+      size: 2228
+    outs:
+    - path: data/final.csv
+      hash: md5
+      md5: 81625b2236359d2d92ce63ee09ff2c13
+      size: 3014315
+  split_data:
+    cmd: python src/stages/split_data.py
+    deps:
+    - path: data/final.csv
+      hash: md5
+      md5: 81625b2236359d2d92ce63ee09ff2c13
+      size: 3014315
+    - path: src/stages/split_data.py
+      hash: md5
+      md5: 872f81ccdc0846219650edd5e03eb6d9
+      size: 1769
+    outs:
+    - path: data/test.csv
+      hash: md5
+      md5: f1d6cfb1db40d8a6c6a2e9742f1006b6
+      size: 564616
+    - path: data/train.csv
+      hash: md5
+      md5: f97383f0ad404520d625fe8352d0ed02
+      size: 2259847
+  train_model:
+    cmd: python src/stages/train.py
+    deps:
+    - path: data/test.csv
+      hash: md5
+      md5: f1d6cfb1db40d8a6c6a2e9742f1006b6
+      size: 564616
+    - path: data/train.csv
+      hash: md5
+      md5: f97383f0ad404520d625fe8352d0ed02
+      size: 2259847
+    - path: src/stages/train.py
+      hash: md5
+      md5: 8bbb3c391db27e5b317cb201e9284f1c
+      size: 4193
+    outs:
+    - path: models/housing.joblib
+      hash: md5
+      md5: 03a85302df37d40f22f420c78b9f4067.dir
+      size: 81779105
+      nfiles: 1

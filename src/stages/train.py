@@ -86,6 +86,9 @@ def train_model(config: Any) -> None:
         for param_name, param_value in best_model.get_params().items():
             mlflow.log_param(param_name, param_value)
 
+        for metric_name, metric_value in result_metrics.items():
+            mlflow.log_metric(metric_name, metric_value)
+        
         # Логирование модели
         mlflow.sklearn.log_model(best_model, "model")
 
